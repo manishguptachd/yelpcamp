@@ -44,7 +44,7 @@ app.use(require("express-session")({
     resave: false,
     saveUninitialized: false
 }));
-//===============We have to use these two line anytime when we use==========================//
+//===============We have to use these two line alltime when we use==========================//
 app.use(passport.initialize()); //tell express to use passport
 app.use(passport.session());
 //===============End of we have to use these two line anytime when we use passportjs==========================//
