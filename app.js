@@ -1,7 +1,6 @@
 const express = require("express"),
     flash = require("connect-flash"),
     app = express(),
-    bodyParser = require("body-parser"),
     mongoose = require("mongoose"),
     request = require("request"),
     passport = require("passport"),
@@ -31,7 +30,7 @@ var Campground = require("./models/campground"), //require Campground modules fo
 //========================End of Creating Database============================================//
 
 
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public")); //use of css file
 app.use(methodOverride("_method")); //this method is used for PUT method in edit.ejs
